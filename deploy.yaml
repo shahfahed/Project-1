@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-app
+  namespace: default
+spec:
+  repicas: 5
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      label:
+        app: my-app
+    spec:
+      containers:
+        - name: my-deployment
+          image: shahfahed/project-1:latest
