@@ -4,13 +4,13 @@ metadata:
   name: my-app
   namespace: default
 spec:
-  repicas: 5
+  replicas: 5
   selector:
     matchLabels:
       app: my-app
   template:
     metadata:
-      label:
+      labels:
         app: my-app
     spec:
       containers:
