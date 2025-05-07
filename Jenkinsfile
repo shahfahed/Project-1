@@ -15,7 +15,7 @@ pipeline {
         stage('docker') {
             steps {
                 sh 'sudo docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSW}'
-                sh 'sudo docker build --file Dockerfile --tag shahfahed/project-1:$BUILD_NUMBER .'
+                sh 'sudo docker build --file Dockerfile --tag shahfahed/project-1 .'
                 sh 'sudo docker push shahfahed/project-1:$BUILD_NUMBER'
             }
         }
